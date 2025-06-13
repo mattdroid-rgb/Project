@@ -48,7 +48,11 @@ class StudentsController extends Controller
             'stdAge' => 'required|integer|min:1',
         ]);
 
-        
+        $student = Students::findOrFail($id);
+        $student->name = $request->stdName;
+        $student->age = $request->stdAge;
+        $student->save();
+
         return redirect()->route('std.index')->with('success', 'Student Updated!');
 
     }
