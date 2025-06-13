@@ -2,9 +2,6 @@
 
 namespace App\Providers;
 
-use Illuminate\Support\ServiceProvider;
-use App\Http\Middleware\NoCache;
-use Illuminate\Foundation\Configuration\Middleware;
 
 class AppServiceProvider extends ServiceProvider
 {
